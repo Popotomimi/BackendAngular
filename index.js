@@ -1,13 +1,15 @@
-const jsonServer = require("json-server");
+const express = require("express");
 const cors = require("cors");
-const server = jsonServer.create();
-const router = jsonServer.router("db.json");
-const middlewares = jsonServer.defaults();
-const port = process.env.PORT || 8080;
+const port = 3000;
 
-server.use(cors());
-server.use(middlewares);
-server.use(router);
-server.listen(port, () => {
-  console.log(`JSON Server is running on port ${port}`);
+const app = express();
+
+app.use(cors({ credentials: true, origin: "*" }));
+app.use(express.json());
+
+const notesRoutes = require("./routes/notesRoutes");
+app.use("/notes", notesRoutes);
+
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta: ${port}`);
 });
