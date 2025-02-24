@@ -1,0 +1,28 @@
+{
+    "tasks": [
+      {
+        "id": "2",
+        "tarefa": "Estudar Angular",
+        "categoria": "Trabalho",
+        "concluido": true
+      },
+      {
+        "id": "96fc",
+        "tarefa": "Estudar Angular até entender",
+        "categoria": "Trabalho",
+        "concluido": false
+      },
+      {
+        "id": "5d28",
+        "tarefa": "Estudar mais Angular",
+        "categoria": "Trabalho",
+        "concluido": false
+      },
+      {
+        "id": "9c02",
+        "tarefa": "Estudar Angular de novo",
+        "categoria": "Trabalho",
+        "concluido": false
+      }
+    ]
+  }
